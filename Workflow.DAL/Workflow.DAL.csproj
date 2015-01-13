@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{097EE245-C4A8-4412-9E4B-F96AD4DDCC16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Workflow.DAL</RootNamespace>
+    <AssemblyName>Workflow.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cus_CV_DetDAL.cs" />
+    <Compile Include="Cus_Job_DetDAL.cs" />
+    <Compile Include="Cus_Job_InterviewDAL.cs" />
+    <Compile Include="Cus_Job_MstrDAL.cs" />
+    <Compile Include="Cus_MGT_MstrDAL.cs" />
+    <Compile Include="Cus_MIS_ServiceDAL.cs" />
+    <Compile Include="Cus_MIS_TypeDAL.cs" />
+    <Compile Include="Cus_PO_MstrDAL.cs" />
+    <Compile Include="Cus_PO_Mstr_HistDAL.cs" />
+    <Compile Include="Cus_UserPP_RightDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysMenuDAL.cs" />
+    <Compile Include="SysUserManageDAL.cs" />
+    <Compile Include="Sys_Appd_MstrDAL.cs" />
+    <Compile Include="Sys_Appr_MstrDAL.cs" />
+    <Compile Include="Sys_Entrust_MstrDAL.cs" />
+    <Compile Include="Sys_Flow_ConfigDAL.cs" />
+    <Compile Include="Sys_Flow_MstrDAL.cs" />
+    <Compile Include="Sys_Form_MstrDAL.cs" />
+    <Compile Include="Sys_Link_MstrDAL.cs" />
+    <Compile Include="Sys_Login_RecordDAL.cs" />
+    <Compile Include="Sys_OU_MstrDAL.cs" />
+    <Compile Include="Sys_Attach_MstrDAL.cs" />
+    <Compile Include="Sys_Code_MstrDAL.cs" />
+    <Compile Include="Sys_Menu_MstrDAL.cs" />
+    <Compile Include="Sys_SystemDAL.cs" />
+    <Compile Include="Sys_Task_ListDAL.cs" />
+    <Compile Include="Sys_User_GroupDAL.cs" />
+    <Compile Include="V_Appr_FlowDAL.cs" />
+    <Compile Include="V_PO_Query_RightDAL.cs" />
+    <Compile Include="V_User_GroupDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Workflow.DBUtility\Workflow.DBUtility.csproj">
+      <Project>{8BF43CB0-8622-450E-B9E4-EBC5917AF776}</Project>
+      <Name>Workflow.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workflow.Model\Workflow.Model.csproj">
+      <Project>{26FACC31-29EA-4F9C-B7C9-6A0362E8A87D}</Project>
+      <Name>Workflow.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

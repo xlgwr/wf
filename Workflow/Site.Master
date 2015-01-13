@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Workflow.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="UI/themes/default/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="UI/themes/css/core.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="UI/themes/css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="UI/uploadify/css/uploadify.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="UI/js/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="UI/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="UI/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="UI/js/jquery.bgiframe.js" type="text/javascript"></script>
+    <script src="UI/xheditor/xheditor-1.2.1.min.js" type="text/javascript"></script>
+    <script src="UI/xheditor/xheditor_lang/zh-cn.js" type="text/javascript"></script>
+    <script src="UI/uploadify/scripts/jquery.uploadify.js" type="text/javascript"></script>
+    <script type="text/javascript" src="UI/chart/raphael.js"></script>
+    <script type="text/javascript" src="UI/chart/g.raphael.js"></script>
+    <script type="text/javascript" src="UI/chart/g.bar.js"></script>
+    <script type="text/javascript" src="UI/chart/g.line.js"></script>
+    <script type="text/javascript" src="UI/chart/g.pie.js"></script>
+    <script type="text/javascript" src="UI/chart/g.dot.js"></script>
+    <script src="UI/js/dwz.core.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.util.date.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.validate.method.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.barDrag.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.drag.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.tree.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.accordion.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.ui.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.theme.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.switchEnv.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.alertMsg.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.contextmenu.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.navTab.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.tab.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.resize.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.dialog.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.dialogDrag.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.sortDrag.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.cssTable.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.stable.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.taskBar.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.ajax.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.pagination.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.database.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.datepicker.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.effects.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.panel.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.checkbox.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.history.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.combox.js" type="text/javascript"></script>
+    <script src="UI/js/dwz.print.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <div>
+            <a target="PageFrame" href="Systems/Sys_ModifyPass.aspx">
+                <asp:Label ID="lblModify" runat="server" Text="Modify Passphrase" ToolTip="修改密码"></asp:Label></a>|<asp:LinkButton
+                    ID="lblLanguage" runat="server" OnClick="lblLanguage_Click" Text="中文" ToolTip="English"></asp:LinkButton>|
+            <asp:LinkButton ID="lnkLogiout" runat="server" Text="Logout" ToolTip="注销" OnClick="lnkLogiout_Click"
+                OnClientClick="javascript:return confirm('Sure log off?');"></asp:LinkButton>
+            <%-- <asp:ImageButton ID="imgLoginout" 
+                OnClientClick="javascript:return confirm('Sure log off?');" 
+                ImageUrl="images/btn_exit.png" runat="server" onclick="imgLoginout_Click" />--%>
+            <br />
+            <span></span>
+        </div>
+        <span class="title">Wong's Electronics Company Limited</span> <span style="margin-left: 200px;">
+            &nbsp;</span>
+        <asp:Label ID="lblWelco" runat="server" Text="Welcome" ToolTip="欢迎"></asp:Label>
+        [
+        <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+        ] | <a>
+            <asp:Label ID="lblDept" runat="server" Text="Dept" ToolTip="部门"></asp:Label>:
+            <asp:Label ID="lblDeptName" runat="server" Text="" Font-Size="14px"></asp:Label></a>
+        <a>
+            <asp:Label ID="lblCompany" runat="server" Text="Company" ToolTip="公司"></asp:Label>:
+            <asp:Label ID="lblLocation" runat="server" Text="" Font-Size="14px"></asp:Label></a>
+        <br />
+    </div>
+    <div class="toolbar">
+        <div class="toolbarLeft">
+        </div>
+        <div class="toolbarContent">
+            <a onclick="setUrl('Systems/Sys_Tasklist_001.aspx')" href="#">
+                <img src="images/61.png" alt="" />
+                <asp:Label ID="lblHide" runat="server" Text="My To-Do-List" ToolTip="我的任务"></asp:Label></a>|
+            <a onclick="setUrl('Systems/Sys_InProcess.aspx')" href="#">
+                <img src="images/28.png" alt="" />
+                <asp:Label ID="lblProcessIn" runat="server" Text="My Open Task" ToolTip="我的处理中任务"></asp:Label></a>
+        </div>
+        <div class="toolbarRight">
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+   <%-- <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>--%>
+    </form>
+</body>
+</html>

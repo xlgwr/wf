@@ -1,0 +1,61 @@
+﻿
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+
+		<title>Loading...</title>
+		<script type="text/javascript">
+		    var url = "Main.html"    //要加载的目标页
+		    //var url = "/WebRoot/main/main.jsp.htm";
+		    window.onload = function () {
+		        //location=url;                            //网页加载后转到目标页
+		        setTimeout(isPageLoad, 2000);
+		    }
+		    function isPageLoad() {
+		        location = url;
+		    }
+		    //用iframe预载目标页 
+		    document.write("<iframe src=\"" + url + "\" style=\"display:none\"></iframe>")
+		</script>
+
+        <link href="Style/main.css" rel="stylesheet" type="text/css" />
+	    <style type="text/css">
+            .style1
+            {
+                height: 29px;
+            }
+            .style2
+            {
+                width: 119px;
+            }
+        </style>
+	</head>
+
+	<body>
+		<div id="man_zone" 
+            
+            style="width:99%;height:100%; text-align: center;padding-top:20%; font-weight: 700;">
+			<table  align="center" 
+                
+                style="height: 210px; width: 426px; background-image: url('images/invitbg_s1_t1_c1.gif'); margin-bottom: 0px;">
+                <tr>
+                    <td colspan="2" class="style1">
+                        &nbsp;&nbsp;&nbsp;&nbsp; Welcome！&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style2" valign="middle">
+                        <div align="center" style="width: 126px">
+			<img src="Images/Login/loading.gif" style="height: 127px; width: 112px" /></div>
+                    </td>
+                    <td>
+                        <div align="left" style="width: 275px; font-size: 13px;">
+                            <b>Loading Data , please wait!</b></div>
+                    </td>
+                </tr>
+            </table>
+		</div>
+	</body>
+
+</html>

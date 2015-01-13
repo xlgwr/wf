@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26FACC31-29EA-4F9C-B7C9-6A0362E8A87D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Workflow.Model</RootNamespace>
+    <AssemblyName>Workflow.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cus_CV_Det_Model.cs" />
+    <Compile Include="Cus_Job_Det_Model.cs" />
+    <Compile Include="Cus_Job_Interview_Model.cs" />
+    <Compile Include="Cus_Job_Mstr_Model.cs" />
+    <Compile Include="Cus_MGT_Mstr_Model.cs" />
+    <Compile Include="Cus_MIS_Service_Model.cs" />
+    <Compile Include="Cus_MIS_Type_Model.cs" />
+    <Compile Include="Cus_PO_Mstr_Hist_Model.cs" />
+    <Compile Include="Cus_PO_Mstr_Model.cs" />
+    <Compile Include="Cus_UserPP_Right_Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys_Appd_Mstr_Model.cs" />
+    <Compile Include="Sys_Appr_Mstr_Model.cs" />
+    <Compile Include="Sys_Entrust_Mstr_Model.cs" />
+    <Compile Include="Sys_Flow_Approve_Model.cs" />
+    <Compile Include="Sys_Flow_Config_Model.cs" />
+    <Compile Include="Sys_Flow_Mstr_Model.cs" />
+    <Compile Include="Sys_Form_Mstr_Model.cs" />
+    <Compile Include="Sys_Link_Mstr_Model.cs" />
+    <Compile Include="Sys_Login_Record_Model.cs" />
+    <Compile Include="Sys_OU_Mstr.cs" />
+    <Compile Include="Sys_Attach_Mstr_Model.cs" />
+    <Compile Include="Sys_Code_Mstr_Model.cs" />
+    <Compile Include="Sys_Menu_Mstr_Model.cs" />
+    <Compile Include="Sys_User_Dept_Model.cs" />
+    <Compile Include="Sys_User_Group_Model.cs" />
+    <Compile Include="Sys_User_Info_Model.cs" />
+    <Compile Include="V_Appr_Flow_Model.cs" />
+    <Compile Include="V_PO_Query_Right_Model.cs" />
+    <Compile Include="V_User_Group_Model.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

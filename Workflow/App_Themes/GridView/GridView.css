@@ -1,0 +1,29 @@
+﻿
+.GridItem
+{
+     font-size: 12;
+     background-color:#D6EBFF;
+     text-align:left;
+}
+.GridEdit
+{
+     font-size: 12;
+     background-color:#D6EBFF;
+     text-align:left;
+}
+
+.GridHeader
+{
+     font-size:14;
+     font-weight:bold;
+     background:url(gd_hd_hd.jpg) repeat-x;
+     text-align:left;
+}
+
+.GridAlter
+{
+     font-size:12;
+     background-color:#EDF6FF;
+     text-align:left;
+}
+

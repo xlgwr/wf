@@ -1,0 +1,9 @@
+﻿<asp:GridView runat="server"  SkinID="GridView"  AutoGenerateColumns="false">
+    <RowStyle CssClass="GridItem" />
+    <EditRowStyle CssClass="GridEdit" />
+    <SelectedRowStyle CssClass="GridHeader" />
+    <PagerStyle CssClass="GridItem" />
+    <HeaderStyle CssClass="GridHeader" />
+    <AlternatingRowStyle CssClass="GridAlter" />
+</asp:GridView>
+
